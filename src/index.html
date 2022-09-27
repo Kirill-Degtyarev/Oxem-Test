@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Oxem Test</title>
+    <meta name="description" content="Oxem Test">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <section class="page-calculator">
+            <div class="page-calculator__container calculator">
+                <div class="calculator-body">
+                    <h1 class="calculator-body__title">Рассчитайте стоимость автомобиля в лизинг</h1>
+                    <div class="calculator-body__calculator calculator">
+                        <div class="calculator-price">
+                            <h2 class="calculator-price__title">
+                                Стоимость автомобиля
+                            </h2>
+                            <div class="calculator-price__input price-input">
+                                <div class="price-input__input input-price">
+                                    <input type="number" class="input-price__input" id="input-price" name="input-price"
+                                        value="1000000" min="1000000" max="6000000"
+                                        onkeypress="this.value=this.value.substring(0,6);">
+                                    <span class="input-price__type">₽</span>
+                                </div>
+                                <input type="range" class="price-input__range" id="range-price" value="1000000"
+                                    name="range-price" min="1000000" max="6000000">
+                            </div>
+                        </div>
+                        <div class="calculator-contribution">
+                            <h2 class="calculator-contribution__title">
+                                Первоначальный взнос
+                            </h2>
+                            <div class="calculator-contribution__input contribution-input">
+                                <div class="contribution-input__input input-contribution">
+                                    <input type="number" class="input-contribution__input" id="input-contribution"
+                                        value="100000" name="input-contribution" min="1000000" max="6000000">
+                                    <div class="input-contribution__type contribution-type"><span
+                                            class="contribution-type__text">10%</span></div>
+                                </div>
+                                <input type="range" class="contribution-input__range" id="range-contribution" value="10"
+                                    name="range-contribution" min="10" max="60">
+                            </div>
+                        </div>
+                        <div class="calculator-term">
+                            <h2 class="calculator-term__title">
+                                Срок лизинга
+                            </h2>
+                            <div class="calculator-term__input term-input">
+                                <div class="term-input__input input-term">
+                                    <input type="number" class="input-term__input" id="input-term" name="input-term"
+                                        value="24" min="1" max="60">
+                                    <span class="input-term__type">мес.</span>
+                                </div>
+                                <input type="range" class="term-input__range" id="range-term" name="range-term"
+                                    value="24" min="1" max="60">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator-body__result result">
+                        <div class="result-price">
+                            <div class="result-price__sum price-sum">
+                                <h2 class="price-sum__title">Сумма договора лизинга</h2>
+                                <div class="price-sum__result"><span></span>₽</div>
+                            </div>
+                            <div class="result-price__payment price-payment">
+                                <h2 class="price-payment__title">Ежемесячный платеж от</h2>
+                                <div class="price-payment__result"><span>12345</span>₽</div>
+                            </div>
+                        </div>
+                        <div class="result-button">
+                            <input type="button" value="Оставить заявку" onclick="getTreaty()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
