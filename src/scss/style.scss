@@ -421,10 +421,10 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 180px;
     // .result-price__sum
 
     &__sum {
+        margin-right: 15rem;
     }
 
     // .result-price__payment
